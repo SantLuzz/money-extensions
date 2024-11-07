@@ -10,7 +10,7 @@ Este projeto inclui configurações de CI/CD para automação de builds, testes 
 
 ## 🚀 Tecnologias Utilizadas
 
-- **.NET 6** ou superior
+- **.NET 8** ou superior
 - **Azure DevOps** / **GitHub Actions** (para CI/CD)
 - **NuGet** (para publicação do pacote)
 
@@ -40,19 +40,19 @@ O projeto utiliza pipelines para realizar build, testes e publicação do pacote
 
 NUGET_API_KEY – Chave de API para publicação no NuGet
 GITHUB_TOKEN – Token para autenticação no GitHub Actions
-Para configurações adicionais, veja o arquivo .github/workflows/ci-cd.yml.
+Para configurações adicionais, veja o arquivo .github/workflows/main.yml.
 
 ## 📥 Instalação
 Para instalar o pacote em seu projeto .NET, utilize o comando abaixo:
 
 
 ``` bash
-dotnet add package MonetaryExtensions
+dotnet add package SantLuzz.MoneyExtensions
 ```
 Ou adicione o seguinte ao seu arquivo .csproj:
 
 ````xml
-<PackageReference Include="MonetaryExtensions" Version="1.0.0" />
+<PackageReference Include="SantLuzz.MoneyExtensions" Version="1.0.0" />
 ````
 ## 🧪 Testes
 Para rodar os testes do projeto, execute:
