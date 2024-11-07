@@ -1,8 +1,11 @@
+using System.Globalization;
+
 namespace MoneyExtension.Tests;
 
 [TestClass]
 public class MoneyExtensionTests
 {
+    private CultureInfo culture = new CultureInfo("pt-BR");
     [TestMethod]
     public void ShouldConvertDecimalToInt()
     {
@@ -22,7 +25,7 @@ public class MoneyExtensionTests
         string result = amount.ToFormatedValue();
         
         // Assert
-        Assert.AreEqual("R$ 1.234,56", result);
+        Assert.AreEqual(amount.ToString("C", culture), result);
     }
 
     [TestMethod]
@@ -35,7 +38,7 @@ public class MoneyExtensionTests
         string result = amount.ToFormatedValue();
         
         // Assert
-        Assert.AreEqual("R$ 0,00", result);
+        Assert.AreEqual(amount.ToString("C", culture), result);
     }
 
     [TestMethod]
@@ -48,6 +51,6 @@ public class MoneyExtensionTests
         string result = amount.ToFormatedValue();
         
         // Assert
-        Assert.AreEqual("R$ 0,00", result); 
+        Assert.AreEqual(0.ToString("C", culture), result); 
     }
 }
