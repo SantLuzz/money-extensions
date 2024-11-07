@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace MoneyExtension;
 
 public static class Money
@@ -18,8 +20,9 @@ public static class Money
 
     public static string ToFormatedValue(this decimal amount)
     {
-        if(amount <= 0) return 0.ToString("C");
+        var culture = new CultureInfo("pt-BR");
+        if(amount <= 0) return 0.ToString("C", culture);
         
-        return amount.ToString("C");
+        return amount.ToString("C", culture);
     }
 }
