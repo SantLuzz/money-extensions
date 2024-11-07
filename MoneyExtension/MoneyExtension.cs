@@ -6,13 +6,20 @@ public static class Money
     {
         if(amount <= 0) return 0;
         
-        var text = amount.ToString("N2")
+        var value = amount.ToString("N2")
             .Replace(",", "")
             .Replace(".", "");
         
-        if(string.IsNullOrWhiteSpace(text)) return 0;
+        if(string.IsNullOrWhiteSpace(value)) return 0;
         
-        int.TryParse(text, out var cents);
+        int.TryParse(value, out var cents);
         return cents;
+    }
+
+    public static string ToFormatedValue(this decimal amount)
+    {
+        if(amount <= 0) return 0.ToString("C");
+        
+        return amount.ToString("C");
     }
 }
