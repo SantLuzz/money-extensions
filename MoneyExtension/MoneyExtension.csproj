@@ -4,6 +4,24 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <PackageId>SantLuzz.MoneyExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Luiz Felipe Silva Santos</Authors>
+    <Company>SantLuzz</Company>
+    <PackageDescription>Extension for handling monetary values in .NET.</PackageDescription>
+    <Description>Extension for handling monetary values in .NET.</Description>
+    <RepositoryUrl>https://github.com/SantLuzz/money-extensions</RepositoryUrl>
+    <PackegeProjectUrl>https://github.com/SantLuzz/money-extensions</PackegeProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackegeTags>Money;Extensions;int;decimal;converter</PackegeTags>
+    <Title>Money Extensions</Title>
+    <Summary>Extension for handling monetary values in .NET.</Summary>
   </PropertyGroup>
 
+  <ItemGroup>
+      <None Include="..\media\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
